@@ -126,7 +126,7 @@ public class Server {
   			 responseCode = 4;//Wrong protocol version	 
   		 else if(((splitRequest[0]==null || splitRequest[1]==null || splitRequest[2]==null) || (!(firstline[0].equals("ENTS")) || (firstline[1].compareTo("1.0 Request") == 1))) || (!utility.isFileNameSyntaxCorrect(filename, "response")))
   			 responseCode = 2;//Malformed request
-  		 else if((!(filename.equals("directors_message.txt")) && !(filename.equals("program_overview.txt")) && !(filename.equals("scholarly_paper.txt"))) || (fileRead(filename, utility).equals("File not Present")))
+  		 else if((!(filename.equals("file_A.txt")) && !(filename.equals("file_B.txt")) && !(filename.equals("file_C.txt"))) || (fileRead(filename, utility).equals("File not Present")))
   			 responseCode = 3;//Non-existent file
   	}	
 		return responseCode;
@@ -162,7 +162,7 @@ public class Server {
 		FileReader fr = null;//FileReader object
 		try {
 			//Assign the request file to the FileReader object
-			fr = new FileReader("/Users/Karthik/Documents/Server/Ents640Project/"+fileName);
+			fr = new FileReader("file path"+fileName);
 		}
 		catch (FileNotFoundException e) {
 			//If the requested file was not found
