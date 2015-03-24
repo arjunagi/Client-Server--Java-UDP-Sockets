@@ -27,7 +27,7 @@ public class Client {
 		
 		while(viewMoreFiles.matches("yes")) {
 			System.out.print("Please type the name of the required file from the list below: \n");
-			System.out.print("1. directors_message.txt \n2. program_overview.txt \n3. scholarly_paper.txt\n\n");
+			System.out.print("1. file_A.txt \n2. file_B.txt \n3. file_C.txt\n\n");
 			file = inp.next(); //Get the file name of the required file.					
 			if(utility.isFileNameSyntaxCorrect(file, "request")) {
 				messageHandling(file, utility); //If the syntax of the file name is correct, proceed with handling the request.
